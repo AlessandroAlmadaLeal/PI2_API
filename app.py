@@ -473,13 +473,12 @@ def atenderCliente(id_atend):
            WHERE      A.id_cliente = B.id_cliente
               AND     A.id_status = C.id_status
               AND     C.ds_status = 'ESPERA'
-              AND     A.id_atend = 1
 
             ORDER BY  B.fg_prioridade LIMIT 1;"""
   
   cursor.execute(sql)
   resultado = cursor.fetchall()
-  
+
   #Reservamos o id desta requisição, pois é ela que recebera a atualização
   id_req = int(resultado[0][0])
 
