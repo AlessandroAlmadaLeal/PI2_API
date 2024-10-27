@@ -1,3 +1,4 @@
 K312B/
 .env
 devMySQL.txt
+__pycache__/
