@@ -43,7 +43,7 @@ def favicon():
 
 #Verifica se o usuário e senha no banco de dados (se existe e a senha confirma se retorna)
 #-- Precisa fornecer o email em caixa baixa e a hash SHA1 da senha
-@app.route('/logar=<email>/<hash>')
+@app.route('/logar=<email>/<hash>', methods=['GET'])
 def logar(email, hash):
   
   cursor = mydb.cursor()
